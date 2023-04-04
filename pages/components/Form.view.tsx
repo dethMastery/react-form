@@ -27,7 +27,7 @@ interface FormInterface {
 
 function registeringForm() {
   const onSubmit = (values: any) => {
-    console.log(values);
+    window.alert(JSON.parse(values));
   };
 
   const schema = Yup.object().shape({
@@ -47,21 +47,13 @@ function registeringForm() {
     <Form
       onSubmit={onSubmit}
       validate={validation}
-      render={({ handleSubmit }) => (
+      render={(handleSubmit: any) => (
         <form onSubmit={handleSubmit}>
-          <p>
-            <label>First Name</label>
-            <Field
-              name="firstName"
-              component="input"
-              placeholder="First Name"
-            />
-          </p>
+          <label>First Name</label>
+          <Field name="firstName" component="input" placeholder="First Name" />
 
-          <p>
-            <label>Last Name</label>
-            <Field name="lastName" component="input" placeholder="Last Name" />
-          </p>
+          <label>Last Name</label>
+          <Field name="lastName" component="input" placeholder="Last Name" />
 
           <button type="submit">Submit</button>
         </form>
@@ -70,4 +62,4 @@ function registeringForm() {
   );
 }
 
-export default registeringForm
+export default registeringForm;
