@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className={styles.main}>
         <section>
           <h1 className={IBM.className + " text-5xl"}>Hi :D</h1>
         </section>
