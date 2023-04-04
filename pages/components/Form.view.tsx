@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Form, Field, FormRenderProps } from "react-final-form";
 import * as Yup from "yup";
 
@@ -33,9 +33,8 @@ interface FormInterface {
 }
 
 function registeringForm() {
-  const onSubmit = (values: any) => {
+  const submitHandle = (values: FormInterface) => {
     console.log(values);
-    
   };
 
   const schema = Yup.object().shape({
@@ -52,14 +51,12 @@ function registeringForm() {
   };
 
   return (
-    <Form
-      onSubmit={onSubmit}
-      validate={validation}
-      render={(handleSubmit: any) => (
-        <form onSubmit={handleSubmit} className={IBM.className}>
+    <Form onSubmit={submitHandle} validate={validation}>
+      {(props) => (
+        <form onSubmit={props}>
           <label>First Name</label>
           <Field name="firstName">
-            {({input}) => (
+            {({ input }) => (
               <input
                 className="p-1 border-[#2e2f2f] border-b-[1px]"
                 {...input}
@@ -71,7 +68,7 @@ function registeringForm() {
 
           <label>Last Name</label>
           <Field name="lastName">
-            {({input}) => (
+            {({ input }) => (
               <input
                 className="p-1 border-[#2e2f2f] border-b-[1px]"
                 {...input}
@@ -81,10 +78,15 @@ function registeringForm() {
           </Field>
           <br />
 
-          <button type="submit" className="submit transition p-[.75rem] my-4 bg-[#45b8ac] text-[whitesmoke] rounded-[1rem] hover:opacity-60">Submit</button>
+          <button
+            type="submit"
+            className="submit transition p-[.75rem] my-4 bg-[#45b8ac] text-[whitesmoke] rounded-[1rem] hover:opacity-60"
+          >
+            Submit
+          </button>
         </form>
       )}
-    />
+    </Form>
   );
 }
 
