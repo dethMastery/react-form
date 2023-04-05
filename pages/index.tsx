@@ -2,7 +2,7 @@ import Head from "next/head";
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-import registeringForm from "./components/Form.view";
+import registeringForm from "./components/Form";
 
 const IBM = IBM_Plex_Sans_Thai({
   weight: "300",

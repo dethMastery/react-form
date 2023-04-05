@@ -1,3 +1,7 @@
 .submit {
   transition: all .3s !important;
 }
+
+.inputContainer, .optionContainer {
+  margin: .5rem 0;
+}
