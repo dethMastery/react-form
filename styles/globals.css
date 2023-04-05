@@ -7,3 +7,25 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 80%;
+  margin: auto 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: .1;
+}
