@@ -62,13 +62,13 @@ function registeringForm() {
         <form onSubmit={handleSubmit}>
           {/* First name */}
           <div className="inputContainer my-[.5rem]">
-            <label>First Name</label>
+            <label>First Name</label> <br />
             <Field name="firstName">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="First Name"
@@ -80,13 +80,13 @@ function registeringForm() {
 
           {/* Last name */}
           <div className="inputContainer my-[.5rem]">
-            <label>Last Name</label>
+            <label>Last Name</label> <br />
             <Field name="lastName">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="Last Name"
@@ -98,13 +98,13 @@ function registeringForm() {
 
           {/* Gender */}
           <div className="optionContainer my-[.5rem]">
-            <label>Gender</label>
+            <label>Gender</label> <br />
             <Field name="gender">
               {({ input }) => (
                 <select
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 text-center"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                 >
@@ -119,13 +119,13 @@ function registeringForm() {
 
           {/* Birthday */}
           <div className="inputContainer my-[.5rem]">
-            <label>Birthdate</label>
+            <label>Birth date</label> <br />
             <Field name="birthDate">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="Birth date"
@@ -137,17 +137,16 @@ function registeringForm() {
 
           {/* Age */}
           <div className="inputContainer my-[.5rem]">
-            <label>Age</label>
+            <label>Age</label> <br />
             <Field name="age">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="Age"
-                  type="number"
                 />
               )}
             </Field>
@@ -155,13 +154,13 @@ function registeringForm() {
 
           {/* CitizenID */}
           <div className="inputContainer my-[.5rem]">
-            <label>Citizen ID</label>
+            <label>Citizen ID</label> <br />
             <Field name="citizenID">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="CitizenID"
@@ -173,13 +172,13 @@ function registeringForm() {
 
           {/* E-Mail */}
           <div className="inputContainer my-[.5rem]">
-            <label>E-Mail</label>
+            <label>E-Mail</label> <br />
             <Field name="email">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="E-Mail"
@@ -191,13 +190,13 @@ function registeringForm() {
 
           {/* Telephone number */}
           <div className="inputContainer my-[.5rem]">
-            <label>Telephone Number</label>
+            <label>Telephone Number</label> <br />
             <Field name="phoneNumber">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="Phone Number"
@@ -209,14 +208,14 @@ function registeringForm() {
 
           {/* Address */}
           <div className="inputContainer my-[.5rem]">
-            <label>Address</label>
+            <label>Address</label> <br />
             <Field name="address">
               {({ input }) => (
                 <textarea
                   id="address"
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="Address"
@@ -227,13 +226,13 @@ function registeringForm() {
 
           {/* Pre school */}
           <div className="inputContainer my-[.5rem]">
-            <label>Pre-school</label>
+            <label>Pre-school</label> <br />
             <Field name="preSchool">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="Pre-school"
@@ -244,13 +243,13 @@ function registeringForm() {
 
           {/* Faculty */}
           <div className="inputContainer my-[.5rem]">
-            <label>Faculty</label>
+            <label>Faculty</label> <br />
             <Field name="faculty">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="Faculty"
@@ -261,13 +260,13 @@ function registeringForm() {
 
           {/* Class */}
           <div className="inputContainer my-[.5rem]">
-            <label>Class</label>
+            <label>Class</label> <br />
             <Field name="class">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="Class"
@@ -277,13 +276,13 @@ function registeringForm() {
           </div>
 
           <div className="inputContainer my-[.5rem]">
-            <label>GPA</label>
+            <label>GPA</label> <br />
             <Field name="gpa">
               {({ input }) => (
                 <input
                   className={
                     IBM.className +
-                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0"
+                    " p-1 border-[#2e2f2f] border-b-[1px] outline-0 w-[80%] text-center"
                   }
                   {...input}
                   placeholder="GPA"

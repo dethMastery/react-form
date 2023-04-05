@@ -22,15 +22,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <section>
-          <h1 className={IBM.className + " text-3xl underline"}>
-            School Registration Form
-          </h1>
-        </section>
+      <div className="overlay bg-[#2e2f2f]/60 w-full h-screen backdrop-blur-sm text-center flex flex-col align-middle justify-center ">
+        <main className={styles.main + " bg-[whitesmoke] w-[30rem] h-[80%] mx-auto rounded-[1rem] p-1 overflow-y-auto"}>
+          <section>
+            <h1 className={IBM.className + " text-3xl underline m-[2rem]"}>
+              School Registration Form
+            </h1>
+          </section>
 
-        <section>{registeringForm()}</section>
-      </main>
+          <section className="w-full">{registeringForm()}</section>
+        </main>
+      </div>
     </>
   );
 }
