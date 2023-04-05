@@ -10,7 +10,7 @@ export const schema = Yup.object().shape({
   citizenID: Yup.number().min(13).max(13).required("Citizen ID is required."),
 
   email: Yup.string().email().required('E-Mail is Required'),
-  phoneNumber: Yup.number().min(9).max(9).required("Phone number is required."),
+  phoneNumber: Yup.number().min(10).max(10).required("Phone number is required."),
   address: Yup.string().required("Address is required."),
 
   preSchool: Yup.string().required('Pre-school is required.'),
