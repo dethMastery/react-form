@@ -6,7 +6,7 @@ export const schema = Yup.object().shape({
   gender: Yup.string().required("Gender is required."),
   age: Yup.number().positive().integer().required("Age is required."),
 
-  birthday: Yup.date().required("Birthday is required."),
+  birthDate: Yup.date().required("Birthday is required."),
   citizenID: Yup.number().min(13).max(13).required("Citizen ID is required."),
 
   email: Yup.string().email().required('E-Mail is Required'),
