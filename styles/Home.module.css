@@ -5,3 +5,7 @@
 .inputContainer, .optionContainer {
   margin: .5rem 0;
 }
+
+.inputContainer input, .optionContainer option {
+  transition: all .3s !important;
+}
