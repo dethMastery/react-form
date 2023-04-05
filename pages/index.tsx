@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Final Form</title>
+        <title>School Registration Form</title>
         <meta
           name="description"
           content="just a form that make with 'React Final Form' + 'YUP'"
@@ -24,7 +24,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <section>
-          <h1 className={IBM.className + " text-5xl"}>Hi :D</h1>
+          <h1 className={IBM.className + " text-3xl underline"}>
+            School Registration Form
+          </h1>
         </section>
 
         <section>{registeringForm()}</section>
