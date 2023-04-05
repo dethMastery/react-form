@@ -52,13 +52,15 @@ function registeringForm() {
 
   return (
     <Form onSubmit={submitHandle} validate={validation}>
-      {(props) => (
-        <form onSubmit={props}>
+      {({ handleSubmit, submission }) => (
+        <form onSubmit={handleSubmit}>
           <label>First Name</label>
           <Field name="firstName">
             {({ input }) => (
               <input
-                className="p-1 border-[#2e2f2f] border-b-[1px]"
+                className={
+                  IBM.className + " p-1 border-[#2e2f2f] border-b-[1px]"
+                }
                 {...input}
                 placeholder="First Name"
               />
@@ -70,7 +72,9 @@ function registeringForm() {
           <Field name="lastName">
             {({ input }) => (
               <input
-                className="p-1 border-[#2e2f2f] border-b-[1px]"
+                className={
+                  IBM.className + " p-1 border-[#2e2f2f] border-b-[1px]"
+                }
                 {...input}
                 placeholder="Last Name"
               />
@@ -79,6 +83,7 @@ function registeringForm() {
           <br />
 
           <button
+            disabled={submission}
             type="submit"
             className="submit transition p-[.75rem] my-4 bg-[#45b8ac] text-[whitesmoke] rounded-[1rem] hover:opacity-60"
           >
