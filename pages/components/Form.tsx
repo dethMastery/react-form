@@ -19,8 +19,6 @@ interface FormInterface {
   birthDate?: Date;
   age?: number;
 
-  race?: string;
-  nation?: string;
   citizenID?: number;
 
   email?: string;
@@ -42,6 +40,8 @@ const validation = async (values: FormInterface): Promise<ValidationErrors> => {
   try {
     await schema.validate(values, { abortEarly: false });
   } catch (err: any) {
+    console.log('err:', err);
+    
     return err.inner.reduce(
       (errors: ValidationErrors, innerError: Yup.ValidationError) => {
         if (innerError.path !== undefined) {
@@ -97,7 +97,7 @@ function registeringForm() {
           </div>
 
           {/* Gender */}
-          {/* <div className="optionContainer my-[.5rem]">
+          <div className="optionContainer my-[.5rem]">
             <label>Gender</label> <br />
             <Field name="gender">
               {({ input }) => (
@@ -115,10 +115,10 @@ function registeringForm() {
               )}
             </Field>
             <br />
-          </div> */}
+          </div>
 
           {/* Birthday */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>Birth date</label> <br />
             <Field name="birthDate">
               {({ input }) => (
@@ -133,10 +133,10 @@ function registeringForm() {
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* Age */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>Age</label> <br />
             <Field name="age">
               {({ input }) => (
@@ -147,13 +147,14 @@ function registeringForm() {
                   }
                   {...input}
                   placeholder="Age"
+                  type="number"
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* CitizenID */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>Citizen ID</label> <br />
             <Field name="citizenID">
               {({ input }) => (
@@ -164,14 +165,14 @@ function registeringForm() {
                   }
                   {...input}
                   placeholder="CitizenID"
-                  type="number"
+                  type="text"
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* E-Mail */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>E-Mail</label> <br />
             <Field name="email">
               {({ input }) => (
@@ -186,10 +187,10 @@ function registeringForm() {
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* Telephone number */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>Telephone Number</label> <br />
             <Field name="phoneNumber">
               {({ input }) => (
@@ -203,10 +204,10 @@ function registeringForm() {
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* Address */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>Address</label> <br />
             <Field name="address">
               {({ input }) => (
@@ -221,10 +222,10 @@ function registeringForm() {
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* Pre school */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>Pre-school</label> <br />
             <Field name="preSchool">
               {({ input }) => (
@@ -238,10 +239,10 @@ function registeringForm() {
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* Faculty */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>Faculty</label> <br />
             <Field name="faculty">
               {({ input }) => (
@@ -255,10 +256,10 @@ function registeringForm() {
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* Class */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>Class</label> <br />
             <Field name="class">
               {({ input }) => (
@@ -272,10 +273,10 @@ function registeringForm() {
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           {/* GPA */}
-          {/* <div className="inputContainer my-[.5rem]">
+          <div className="inputContainer my-[.5rem]">
             <label>GPA</label> <br />
             <Field name="gpa">
               {({ input }) => (
@@ -289,7 +290,7 @@ function registeringForm() {
                 />
               )}
             </Field>
-          </div> */}
+          </div>
 
           <button
             type="submit"
