@@ -29,7 +29,7 @@ interface FormInterface {
   faculty?: string;
   class?: string;
 
-  GPA?: number;
+  gpa?: number;
 }
 
 const submitHandle = (values: FormInterface) => {
@@ -53,7 +53,7 @@ const validation = async (values: FormInterface): Promise<ValidationErrors> => {
 
 function registeringForm() {
   return (
-    <Form
+    <Form<FormInterface>
       onSubmit={submitHandle}
       validate={validation}
       render={({ handleSubmit, submitting }) => (
@@ -273,9 +273,9 @@ function registeringForm() {
             </Field>
           </div>
 
-          {/* GPA */}
+          {/* gpa */}
           <div className="inputContainer my-[.5rem]">
-            <label>GPA</label> <br />
+            <label>gpa</label> <br />
             <Field name="gpa">
               {({ input }) => (
                 <input
