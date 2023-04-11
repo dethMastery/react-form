@@ -2,14 +2,7 @@ import { Form, Field } from "react-final-form";
 import { ValidationErrors } from "final-form";
 import * as Yup from "yup";
 
-import { IBM_Plex_Sans_Thai } from "next/font/google";
-
 import { schema } from "./formSchema";
-
-const IBM = IBM_Plex_Sans_Thai({
-  weight: "300",
-  subsets: ["latin", "thai"],
-});
 
 interface FormInterface {
   firstName?: string;
@@ -65,8 +58,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="First Name"
@@ -83,8 +75,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="Last Name"
@@ -101,8 +92,7 @@ function registeringForm() {
               {({ input }) => (
                 <select
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                 >
@@ -122,8 +112,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="Birth date"
@@ -140,8 +129,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="Age"
@@ -158,8 +146,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="CitizenID"
@@ -176,8 +163,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="E-Mail"
@@ -194,8 +180,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="Phone Number"
@@ -212,8 +197,7 @@ function registeringForm() {
                 <textarea
                   id="address"
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="Address"
@@ -229,8 +213,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="Pre-school"
@@ -246,8 +229,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="Faculty"
@@ -263,8 +245,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="Class"
@@ -280,8 +261,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
                   }
                   {...input}
                   placeholder="GPA"
