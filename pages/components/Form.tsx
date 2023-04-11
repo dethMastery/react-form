@@ -44,6 +44,8 @@ const validation = async (values: FormInterface): Promise<ValidationErrors> => {
   }
 };
 
+const inputStyle = 'transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]'
+
 function registeringForm() {
   return (
     <Form<FormInterface>
@@ -58,7 +60,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="First Name"
@@ -75,7 +77,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Last Name"
@@ -92,7 +94,7 @@ function registeringForm() {
               {({ input }) => (
                 <select
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                 >
@@ -112,7 +114,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Birth date"
@@ -129,7 +131,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Age"
@@ -146,7 +148,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="CitizenID"
@@ -163,7 +165,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="E-Mail"
@@ -180,7 +182,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Phone Number"
@@ -197,7 +199,7 @@ function registeringForm() {
                 <textarea
                   id="address"
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Address"
@@ -213,7 +215,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Pre-school"
@@ -229,7 +231,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Faculty"
@@ -245,7 +247,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Class"
@@ -261,7 +263,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    "transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="GPA"
