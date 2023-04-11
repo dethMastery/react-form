@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://cdn.katsuragi.cyou/fonts/TH/LINEseed-Regular');
+
+@layer base {
+  * {
+    font-family: 'LINEseed-Regular', sans-serif;
+  }
+}
+
 body {
   background: url(https://picsum.photos/1920/1080) no-repeat;
   background-position: center;

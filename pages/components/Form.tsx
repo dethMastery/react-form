@@ -1,59 +1,11 @@
 import { Form, Field } from "react-final-form";
-import { ValidationErrors } from "final-form";
-import * as Yup from "yup";
+import {FormInterface, submitHandle, validation} from './Form.function'
 
-import { IBM_Plex_Sans_Thai } from "next/font/google";
-
-import { schema } from "./formSchema";
-
-const IBM = IBM_Plex_Sans_Thai({
-  weight: "300",
-  subsets: ["latin", "thai"],
-});
-
-interface FormInterface {
-  firstName?: string;
-  lastName?: string;
-  gender?: string;
-
-  birthDate?: Date;
-  age?: number;
-
-  citizenID?: number;
-
-  email?: string;
-  phoneNumber?: string;
-  address?: string;
-
-  preSchool?: string;
-  faculty?: string;
-  class?: string;
-
-  GPA?: number;
-}
-
-const submitHandle = (values: FormInterface) => {
-  console.log(values);
-};
-
-const validation = async (values: FormInterface): Promise<ValidationErrors> => {
-  try {
-    await schema.validate(values, { abortEarly: false });
-  } catch (err: any) {
-    return err.inner.reduce(
-      (errors: ValidationErrors, innerError: Yup.ValidationError) => {
-        if (innerError.path !== undefined) {
-          return { ...errors, [innerError.path]: innerError.message };
-        }
-      },
-      {}
-    );
-  }
-};
+const inputStyle = 'transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]'
 
 function registeringForm() {
   return (
-    <Form
+    <Form<FormInterface>
       onSubmit={submitHandle}
       validate={validation}
       render={({ handleSubmit, submitting }) => (
@@ -65,8 +17,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="First Name"
@@ -83,8 +34,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Last Name"
@@ -101,8 +51,7 @@ function registeringForm() {
               {({ input }) => (
                 <select
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                 >
@@ -122,8 +71,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Birth date"
@@ -140,8 +88,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Age"
@@ -158,8 +105,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="CitizenID"
@@ -176,8 +122,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="E-Mail"
@@ -194,8 +139,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Phone Number"
@@ -212,8 +156,7 @@ function registeringForm() {
                 <textarea
                   id="address"
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Address"
@@ -229,8 +172,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Pre-school"
@@ -246,8 +188,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Faculty"
@@ -263,8 +204,7 @@ function registeringForm() {
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="Class"
@@ -273,15 +213,14 @@ function registeringForm() {
             </Field>
           </div>
 
-          {/* GPA */}
+          {/* gpa */}
           <div className="inputContainer my-[.5rem]">
-            <label>GPA</label> <br />
+            <label>gpa</label> <br />
             <Field name="gpa">
               {({ input }) => (
                 <input
                   className={
-                    IBM.className +
-                    " transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]"
+                    inputStyle
                   }
                   {...input}
                   placeholder="GPA"

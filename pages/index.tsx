@@ -1,13 +1,7 @@
 import Head from "next/head";
-import { IBM_Plex_Sans_Thai } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
 import registeringForm from "./components/Form";
-
-const IBM = IBM_Plex_Sans_Thai({
-  weight: "300",
-  subsets: ["latin", "thai"],
-});
 
 export default function Home() {
   return (
@@ -25,7 +19,7 @@ export default function Home() {
       <div className="overlay bg-[#2e2f2f]/60 w-full h-screen backdrop-blur-sm text-center flex flex-col align-middle justify-center ">
         <main className={styles.main + " bg-[whitesmoke] w-[30rem] h-[80%] mx-auto rounded-[1rem] p-1"}>
           <section>
-            <h1 className={IBM.className + " text-3xl underline m-[2rem]"}>
+            <h1 className={"text-3xl underline m-[2rem]"}>
               School Registration Form
             </h1>
           </section>
