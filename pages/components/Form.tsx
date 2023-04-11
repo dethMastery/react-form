@@ -1,48 +1,5 @@
 import { Form, Field } from "react-final-form";
-import { ValidationErrors } from "final-form";
-import * as Yup from "yup";
-
-import { schema } from "./formSchema";
-
-interface FormInterface {
-  firstName?: string;
-  lastName?: string;
-  gender?: string;
-
-  birthDate?: Date;
-  age?: number;
-
-  citizenID?: number;
-
-  email?: string;
-  phoneNumber?: string;
-  address?: string;
-
-  preSchool?: string;
-  faculty?: string;
-  class?: string;
-
-  gpa?: number;
-}
-
-const submitHandle = (values: FormInterface) => {
-  console.log(values);
-};
-
-const validation = async (values: FormInterface): Promise<ValidationErrors> => {
-  try {
-    await schema.validate(values, { abortEarly: false });
-  } catch (err: any) {
-    return err.inner.reduce(
-      (errors: ValidationErrors, innerError: Yup.ValidationError) => {
-        if (innerError.path !== undefined) {
-          return { ...errors, [innerError.path]: innerError.message };
-        }
-      },
-      {}
-    );
-  }
-};
+import {FormInterface, submitHandle, validation} from './Form.function'
 
 const inputStyle = 'transition-all duration-300 p-1 border-[transparent] border-b-[#2e2f2f] border-[1px] outline-0 w-[80%] text-center bg-[whitesmoke] focus:border-[#ff6f61] focus:border-[1px] focus:rounded-[1rem]'
 
